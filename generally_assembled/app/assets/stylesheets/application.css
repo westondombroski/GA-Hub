@@ -18,8 +18,9 @@
 
 
 body {
-  padding-top: 50px;
+  padding-top: 48px;
   background-image: url("app/assets/images/ga-logo.png");
+  min-height: 100%;
 }
 
 .navbar-nav li a {
@@ -53,6 +54,11 @@ body {
 
 }
 
+.fake-repo {
+  background-color: #EFF0F1;
+  margin-top: 30px;
+}
+
 .navbar-left { 
   size: 20px;
  }
@@ -61,3 +67,13 @@ body {
     border-radius: 55%;
     width: 40%;
 }
+
+.footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+}
+
