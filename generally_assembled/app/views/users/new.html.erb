@@ -1,3 +1,4 @@
+<!-- change the navigation depending if the user is log in or not -->
 <% if current_user %>
 <div class="row">
 	<div class="col-sm-1"><h5>Logo</h5></div>
@@ -6,25 +7,6 @@
 	  <%= image_tag current_user[:image_url], :width=> "30px", :height=> "30px" %></h6>
 	</div>
 </div>
-<br>
-<br>
-<div class="row">
-	<h1 class="text-center">Generally Assembled 
-	<br>
-	<small>Some Assembly required</small></h1>
-</div>
-<div class="row">
-	<div class="col-sm-6 col-sm-offset-3">
-	  <div class="input-group">
-	    <input type="text" class="form-control" placeholder="Search for repos">
-	    <span class="input-group-btn">
-	      <button class="btn btn-default" type="button">search</button>
-	    </span>
-	  </div>
-	  <button class="col-sm-2 col-sm-offset-5 btn btn-default">index</button>
-	</div>
-</div>
-  
   <% else %>
   <div class="row">
   	<div class="col-sm-1"><h5>Logo</h5></div>
@@ -33,3 +15,24 @@
   	</div>
   </div>
 <% end %>
+<!-- end of navigation -->
+<br>
+<br>
+<!-- Header -->
+<div class="row">
+	<h1 class="text-center">Generally Assembled 
+	<br>
+	<small>Some Assembly required</small></h1>
+</div>
+<!-- end Header -->
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+	  <div class="input-group">
+	    <input id="text" type="text" class="form-control" placeholder="Search for repos">
+	    <span class="input-group-btn">
+	      <button class="btn btn-default" type="button">search</button>
+	    </span>
+	  </div>
+	  <button class="col-sm-2 col-sm-offset-5 btn btn-default">index</button>
+	</div>
+</div>
