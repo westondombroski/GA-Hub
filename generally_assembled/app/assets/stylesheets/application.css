@@ -13,3 +13,67 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+body {
+  padding-top: 48px;
+  background-image: url("app/assets/images/ga-logo.png");
+  min-height: 100%;
+}
+
+.navbar-nav li a {
+ line-height: 50px;
+}
+
+.navbar-header {
+  padding-top: 12px;
+}
+
+.navbar-form {
+ padding-top: 15px;
+ width:500px;
+
+}
+
+.navbar-right img {
+  border-radius: 50%;
+
+}
+.btn {
+    padding: 7px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.search {
+      border: 0 none;
+
+}
+
+.fake-repo {
+  background-color: #EFF0F1;
+  margin-top: 30px;
+}
+
+.navbar-left { 
+  size: 20px;
+ }
+
+#logo {
+    border-radius: 55%;
+    width: 40%;
+}
+
+.footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+}
+

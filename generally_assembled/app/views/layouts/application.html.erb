@@ -3,14 +3,116 @@
   <head>
     <title>GenerallyAssembled</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
+    
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+=======
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+>>>>>>> master
   </head>
 
   <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-left"><img id= "logo" src="https://ga-shop-production-herokuapp-com.global.ssl.fastly.net/assets/images/apple-touch-icon_Zb6Ub.png">Hub</a>
+        
+        <div class="col-lg-5 col-lg-offset-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control search" placeholder="Tunely" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="srch-btn" type="submit">Search Repos</i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Stuff</a></li>
+          <li><a href="#">Stuff</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <%= image_tag current_user[:image_url], :width=> "50px", :height=> "50px" %></a>
+            <ul class="dropdown-menu">
+              <% if !current_user %>
+              <li><%= link_to "Join", root_path %></li>
+              <li><%= link_to "Log In", root_path %></li>
+              <% elsif current_user %>
+              <li><%= link_to "Profile", root_path %></li>
+              <li><%= link_to "Settings", root_path %></li>
+              <li><%= link_to "Log Out", root_path%></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class= "fake-repo col-md-8 col-md-offset-2">
+      <h1>Tunely</h1>
+      <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Suspendisse aliquam, augue vitae pulvinar feugiat, magna ipsum varius tellus, quis lobortis est nulla nec ligula. 
+          Aenean cursus enim sit amet tortor rutrum lobortis. 
+          Vestibulum mattis mauris fringilla mauris volutpat, in euismod arcu ultricies. 
+          Nunc eget hendrerit lectus. Proin rutrum elit ut orci fringilla, sit amet ornare turpis molestie. 
+          Proin nec neque eget nulla scelerisque rhoncus sit amet vitae augue. 
+          Vivamus ipsum eros, sodales sed enim ac, malesuada iaculis mi. 
+          Morbi ut orci sit amet tellus posuere convallis. 
+          Cras rhoncus tincidunt ultrices.</p>
+    </div>
+    <div class= "fake-repo col-md-8 col-md-offset-2">
+      <h1>Mongoose Books app</h1>
+      <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Suspendisse aliquam, augue vitae pulvinar feugiat, magna ipsum varius tellus, quis lobortis est nulla nec ligula. 
+          Aenean cursus enim sit amet tortor rutrum lobortis. 
+          Vestibulum mattis mauris fringilla mauris volutpat, in euismod arcu ultricies. 
+          Nunc eget hendrerit lectus. Proin rutrum elit ut orci fringilla, sit amet ornare turpis molestie. 
+          Proin nec neque eget nulla scelerisque rhoncus sit amet vitae augue. 
+          Vivamus ipsum eros, sodales sed enim ac, malesuada iaculis mi. 
+          Morbi ut orci sit amet tellus posuere convallis. 
+          Cras rhoncus tincidunt ultrices.</p>
+    </div>
+    <div class= "fake-repo col-md-8 col-md-offset-2">
+      <h1>Tunely 2.0</h1>
+      <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Suspendisse aliquam, augue vitae pulvinar feugiat, magna ipsum varius tellus, quis lobortis est nulla nec ligula. 
+          Aenean cursus enim sit amet tortor rutrum lobortis. 
+          Vestibulum mattis mauris fringilla mauris volutpat, in euismod arcu ultricies. 
+          Nunc eget hendrerit lectus. Proin rutrum elit ut orci fringilla, sit amet ornare turpis molestie. 
+          Proin nec neque eget nulla scelerisque rhoncus sit amet vitae augue. 
+          Vivamus ipsum eros, sodales sed enim ac, malesuada iaculis mi. 
+          Morbi ut orci sit amet tellus posuere convallis. 
+          Cras rhoncus tincidunt ultrices.</p>
+    </div>
+
+
+      
     <%= yield %>
+
+    <footer class="footer  navbar-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 offset-l2 col-sm-12">
+            <ul class="nav navbar-nav navbar-center">
+              <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+              <li><a class="grey-text text-lighten-3" href="/cities">About</a></li>
+              <li><a class="grey-text text-lighten-3" href="/articles/new">Profile</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2017 Copyright GA-Hub Inc.
+          <a class="grey-text text-lighten-4 right" href="https://github.com/puan0601/vagabond">Github</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
