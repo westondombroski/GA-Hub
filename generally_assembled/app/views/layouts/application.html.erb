@@ -49,6 +49,12 @@
       </div>
     </nav>
 
+    <div class= "col-md-8 col-md-offset-2">
+      <% @repos.each do |article| %>
+      <p><%= repo.name %></p>
+      <p><%= repo.content %></p>
+      <% end %>
+      
     <%= yield %>
 
     <footer class="footer navbar-fixed-bottom navbar-inverse">
