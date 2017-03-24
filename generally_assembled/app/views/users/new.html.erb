@@ -1,6 +1,0 @@
-<% if current_user %>
-  <%= image_tag current_user[:image_url], :width=> "50px", :height=> "50px" %>
-  <%= link_to "Sign Out", "/signout"%>
-  <% else %>
-  <%= link_to "Sign in with Github", "/auth/github" %>
-<% end %>
