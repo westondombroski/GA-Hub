@@ -1,5 +1,5 @@
 class ReposController < ApplicationController
-  # before_action :set_repo, only: [:show, :edit, :update, :destroy]
+  before_action :set_repo, only: [:show, :edit, :update, :destroy]
 
   # GET /repos
   # GET /repos.json
@@ -61,14 +61,14 @@ class ReposController < ApplicationController
     end
   end
 
-#   private
-#     # Use callbacks to share common setup or constraints between actions.
-#     def set_repo
-#       @repo = Repo.find(params[:id])
-#     end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_repo
+      @repo = Repo.find(params[:id])
+    end
 
-#     # Never trust parameters from the scary internet, only allow the white list through.
-#     def repo_params
-#       params.fetch(:repo, {})
-#     end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def repo_params
+      params.fetch(:repo, {})
+    end
 end

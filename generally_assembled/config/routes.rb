@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   get '/auth/github/callback', to: 'sessions#create'
   get "/signout" => "sessions#destroy", :as => :signout
   get '/users/new', to: 'users#new'
-  get '/repos/index', to: 'repos#new'
 end
