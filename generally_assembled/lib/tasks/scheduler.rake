@@ -18,4 +18,5 @@ task git_repos: :environment do
                 content:rendered_readme_HTML
                 )
   end
+  Repo.reindex
 end
