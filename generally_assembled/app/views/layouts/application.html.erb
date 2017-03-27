@@ -42,6 +42,12 @@
         <div class="input-group">
           <input id="smtext" type="text" class="form-control" placeholder="Search for repos">
           <span class="input-group-btn">
+          
+          <%= form_tag("/search", method: "get") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
             <button class="btn btn-default" type="button">search</button>
           </span>
         </div>

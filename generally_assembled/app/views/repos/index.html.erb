@@ -1,11 +1,12 @@
 <br>
 <%= Repo.find_each do |repo| %>
   <div class="thumbnail col-md-10 col-md-offset-1">
-    <h2><%= repo.name %></h2>
+    <h1 class="header-repos text-center"><%= repo.name %></h1>
     <hr>
-    <p class="teaser"><%= raw repo.content.truncate(1100, separator: ' ') %></p>
-    <%= link_to "GitHub", "https://github.com/sf-wdi-labs/#{repo.name}", target: "_blank", class: "btn btn-default"%>
-    <%= link_to "Show", repo_path(repo), class: "btn btn-default" %>
-    <%= link_to "Favorite", "#", class: "btn btn-warning"%>
+    <p><%= raw repo.content.truncate(1000, separator: ' ') %></p>
+    <hr>
+    <%= link_to "GitHub", "https://github.com/sf-wdi-labs/#{repo.name}", target: "_blank", class: "col-md-1 col-md-offset-4 btn btn-default"%>
+    <%= link_to "Show", repo_path(repo), class: "col-md-1 btn btn-default" %>
+    <%= link_to "Favorite", "#", class: "col-md-1 btn btn-warning"%>
   </div>
 <% end %>

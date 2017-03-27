@@ -24,3 +24,7 @@ body{
   box-shadow: grey 1px 1px 1px;
   padding: 5px;
 }
+
+.header-repos{
+  text-transform: capitalize;
+}
