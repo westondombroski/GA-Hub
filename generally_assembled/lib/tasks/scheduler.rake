@@ -2,7 +2,7 @@ desc "This task updates repo data from Github"
 task git_repos: :environment do
 
   user = 'sf-wdi-35'
-  github = Github.new                     ## sets github client
+  github = Github.new ()U                    ## sets github client
   renderer = Redcarpet::Render::HTML.new      ## sets HTML renderer for RedCarpet
   markdown = Redcarpet::Markdown.new renderer ## RedCarpet renderer
   repos = github.repos.list user:user ## gets list of repos
