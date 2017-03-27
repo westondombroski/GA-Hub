@@ -1,79 +1,21 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
-
-
-body {
-  padding-top: 48px;
-  background-image: url("app/assets/images/ga-logo.png");
+body{
+  height: 100%;
   min-height: 100%;
+  background-color: #f2f2f2; 
 }
 
-.navbar-nav li a {
- line-height: 50px;
+.footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:50px;
 }
 
-.navbar-header {
-  padding-top: 12px;
+.standard-text{
+  color: black;
+  text-decoration: none;
 }
 
-.navbar-form {
- padding-top: 15px;
- width:500px;
-
+.grey-background{
+  background-color: #f2f2f2;
 }
-
-.navbar-right img {
-  border-radius: 50%;
-
-}
-.btn {
-    padding: 7px 24px;
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.search {
-      border: 0 none;
-
-}
-
-.fake-repo {
-  background-color: #EFF0F1;
-  margin-top: 30px;
-}
-
-.navbar-left { 
-  size: 20px;
- }
-
-#logo {
-    border-radius: 55%;
-    width: 40%;
-}
-
-.footer {
-    clear: both;
-    position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: -3em;
-}
-}
-
