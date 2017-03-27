@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root to: "users#index"
 
   get '/auth/github/callback', to: 'sessions#create'
-  get "/signout" => "sessions#destroy", :as => :signout
+  get '/signout' => 'sessions#destroy', :as => :signout
   get '/users/new', to: 'users#new'
+  get '/repos', to: 'repos#index'
 
 end

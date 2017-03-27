@@ -1,25 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Repos</h1>
-<p>test</p>
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @repos.each do |repo| %>
-      <tr>
-        <td><%= link_to 'Show', repo %></td>
-        <td><%= link_to 'Edit', edit_repo_path(repo) %></td>
-        <td><%= link_to 'Destroy', repo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Repo', new_repo_path %>
+<%= Repo.all.each do |repo| %>
+  <div class= "thumbnail">
+    <h1><%= repo.name %></h1>
+    <p><%= repo.github_id %></p>
+    <p><%= raw repo.content %></p>
+  </div>
+<% end %>
