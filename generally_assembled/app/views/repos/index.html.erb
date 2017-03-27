@@ -1,8 +1,11 @@
 <br>
 <%= Repo.find_each do |repo| %>
   <div class="thumbnail col-md-10 col-md-offset-1">
-    <h2><%= link_to repo.name, repo_path(repo) %></h2>
+    <h2><%= repo.name %></h2>
     <hr>
     <p class="teaser"><%= repo.content %></p>
+    <%= link_to "GitHub", "https://github.com/sf-wdi-labs/#{repo.name}", target: "_blank", class: "btn btn-default"%>
+    <%= link_to "Show", repo_path(repo), class: "btn btn-default" %>
+    <%= link_to "Favorite", "#", class: "btn btn-warning"%>
   </div>
 <% end %>

@@ -12,7 +12,6 @@ $(document).on("turbolinks:load", function(){
 	}
 
 	// Credits to Robert Mosolgo, github: https://github.com/rmosolgo, repo:https://github.com/rmosolgo/bootstrap-teaser
-	$(function() {
 		$('.teaser').each(function() {
 			var el = $(this);
 			var long_text = el.html()
@@ -39,5 +38,4 @@ $(document).on("turbolinks:load", function(){
 			.mouseenter(function() {$(this).css("text-decoration", "underline")})
 			.mouseleave(function() {$(this).css("text-decoration", "none")})
 
-	})
 });
