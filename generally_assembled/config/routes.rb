@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/users/new', to: 'users#new'
   get '/repos', to: 'repos#index'
+  get '/repos/:id' to: 'repos#show'
 
 end
