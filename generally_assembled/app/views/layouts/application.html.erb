@@ -59,8 +59,8 @@
     <%= Repo.all.each do |repo| %>
       <div class= "fake-repo col-md-8 col-md-offset-2">
         <h1><%= repo.name %></h1>
-        <p><%= raw repo.content %></p>
         <p><%= repo.github_id %></p>
+        <p><%= raw repo.content %></p>
       </div>
     <% end %>
 
