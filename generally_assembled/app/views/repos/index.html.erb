@@ -1,7 +1,8 @@
-<%= Repo.all.each do |repo| %>
-  <div class= "thumbnail">
-    <h1><%= repo.name %></h1>
-    <p><%= repo.github_id %></p>
-    <p><%= raw repo.content %></p>
+<br>
+<%= Repo.find_each do |repo| %>
+  <div class="thumbnail col-md-10 col-md-offset-1 grey-background">
+    <h2><%= repo.name %></h2>
+    <hr>
+    <p><%= repo.content %></p>
   </div>
 <% end %>
