@@ -13,4 +13,10 @@ class ReposController < ApplicationController
     @repo = Repo.new
   end
 
+  def search
+    query = params[:q]
+    @repos = (Repo.search query).take 2
+
+  end
+
 end
