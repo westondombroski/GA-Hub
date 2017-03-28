@@ -17,10 +17,9 @@
     <a href="/"><img class="img-responsive image" src="https://i.imgur.com/9PfJxoO.png"></a>
     </div>
     <!-- begin hidden -->
+    
     <div class="col-sm-4">
       <div class="input-group">
-        <!-- <input id="smtext" type="text" class="form-control" placeholder="Search for repos">
-        <span class="input-group-btn"> -->
           <%= form_tag(search_path, method:'get', id: 'smtext') do %>
             <%= label_tag(:q, "Search for:") %>
             <%= text_field_tag(:q) %>
