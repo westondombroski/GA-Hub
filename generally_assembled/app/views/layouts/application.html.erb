@@ -17,12 +17,16 @@
     <a href="/"><img class="img-responsive image" src="https://i.imgur.com/9PfJxoO.png"></a>
     </div>
     <!-- begin hidden -->
-    <div class="col-sm-4 hide-show">
+    <div class="col-sm-4">
       <div class="input-group">
-        <input id="smtext" type="text" class="form-control" placeholder="Search for repos">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">search</button>
-        </span>
+        <!-- <input id="smtext" type="text" class="form-control" placeholder="Search for repos">
+        <span class="input-group-btn"> -->
+          <%= form_tag(search_path, method:'get', id: 'smtext') do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
+        <!-- </span> -->
       </div>
     </div>
     <!-- end hidden -->
@@ -42,13 +46,13 @@
         <div class="input-group">
           <input id="smtext" type="text" class="form-control" placeholder="Search for repos">
           <span class="input-group-btn">
-          
-          <%= form_tag("/search", method: "get") do %>
+
+          <%= form_tag(search_path, method:'get', id:'smtext') do %>
             <%= label_tag(:q, "Search for:") %>
             <%= text_field_tag(:q) %>
             <%= submit_tag("Search") %>
           <% end %>
-            <button class="btn btn-default" type="button">search</button>
+            <!-- <button class="btn btn-default" type="button">search</button> -->
           </span>
         </div>
       </div>
