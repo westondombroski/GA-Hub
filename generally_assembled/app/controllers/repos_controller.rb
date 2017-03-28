@@ -5,12 +5,13 @@ class ReposController < ApplicationController
   end
 
   def show
-    @repo = Repo.find(params[:id])
-    @new_comment = Comment.build_from(@repo, current_user.id, "")
+    @repos = Repo.find_by_id(params[:id])
   end
 
-  def new
-    @repo = Repo.new
+  def search
+    params.permit(:q)
+    results = Repo.search params[:q]
+    id = results.hits.first['_id']
+    @repos = Repo.find_by_id(id)
   end
-
 end
