@@ -4,7 +4,7 @@
 
 <%= comment.body %>
 <div class="comment-nav"><a class="comment-reply" href="#">reply</a></div>
-<div class="reply-form"><%= form_for @new_comment do |f| %>
+<div class="reply-form well"><%= form_for @new_comment do |f| %>
 <%= f.hidden_field :commentable_id, value: @new_comment.commentable_id %>
 <%= f.hidden_field :commentable_type, value: @new_comment.commentable_type %>
 <%= f.hidden_field :comment_id, value: comment.id %>
@@ -13,7 +13,7 @@
 <% end %>
 
 </div>
-</div>
+</div class="well">
 <%= render partial: "comments/reply", locals: {comments: comment.children} %>
 
 </div>

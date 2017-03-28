@@ -63,12 +63,12 @@ rails s
 
 
 
-#Planned features:
+###Planned features:
 -Allow users to 'favorite' repos.
 -Add a user profile page with the logged-in user's comments, favorites, and comments directed at them.
 -Alert users to any comments made on their favorite repos.
 
-#Wireframes:
+###Wireframes:
 ![alt text](app/assets/images/wireframe1.png)
 
 ![alt text](app/assets/images/wireframe2.png)

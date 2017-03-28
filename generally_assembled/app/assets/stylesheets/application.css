@@ -77,4 +77,7 @@ body {
 code {
   background-color: #dce6f2 !important;
 }
+
+.profile-pic {
+  border-radius: 50%;
 }

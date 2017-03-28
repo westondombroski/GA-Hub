@@ -28,7 +28,7 @@
     </div>
     <!-- end hidden -->
     <div class="col-sm-1 col-sm-offset-6">
-      <h5><%= image_tag current_user[:image_url], :width=> "60px", :height=> "60px" %>
+      <h5><%= image_tag current_user[:image_url], :width=> "60px", :height=> "60px", :class=> "profile-pic" %>
       <%= link_to "Sign Out", "/signout", :class=> "standard-text"%>
       </h5>
     </div>
