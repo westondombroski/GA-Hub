@@ -58,17 +58,20 @@ rails s
 
 
 ### Existing features:
+
 -This application allows users to sign in using Github, search repos from General Assembly's Web Development Immersive program, view them, and leave comments on them.
 -Users can link directly to the Github repo.
 
 
 
 ###Planned features:
+
 -Allow users to 'favorite' repos.
 -Add a user profile page with the logged-in user's comments, favorites, and comments directed at them.
 -Alert users to any comments made on their favorite repos.
 
 ###Wireframes:
+
 ![alt text](app/assets/images/wireframe1.png)
 
 ![alt text](app/assets/images/wireframe2.png)
