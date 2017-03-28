@@ -16,7 +16,6 @@ class ReposController < ApplicationController
   def search
     query = params[:q]
     @repos = (Repo.search query).take 2
-
   end
 
 end
