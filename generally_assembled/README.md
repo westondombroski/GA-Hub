@@ -1,4 +1,4 @@
-# Vagabon
+# Generally Assembled
 
 A full-stack search application built with Ruby on Rails by Weston Dombroski, Anton Pugach, and Ivan Miranda. Using this site, General Assembly students can search and view the contents of Repositories and  comment on them.
 
