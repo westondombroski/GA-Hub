@@ -1,10 +1,10 @@
 <br>
-<%= Repo.find_each do |repo| %>
+<% Repo.find_each do |repo| %>
   <div class="thumbnail col-md-10 col-md-offset-1">
     <div class="well title">
       <h3 class="header-repos text-center"><%= repo.name %></h1>
     </div>
-    <hr>    
+    <hr>
     <p class="content-repos"><%= raw repo.content.truncate(1000, separator: ' ') %></p>
     <hr>
     <div class ="well repo-button-well">
