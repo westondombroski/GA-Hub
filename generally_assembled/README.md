@@ -1,24 +1,83 @@
-# README
+# Vagabon
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A full-stack search application built with Ruby on Rails by Weston Dombroski, Anton Pugach, and Ivan Miranda. Using this site, General Assembly students can search and view the contents of Repositories and  comment on them.
 
-Things you may want to cover:
+### Getting Started
 
-* Ruby version
+These instructions will get the project up and running on your local machine for development and testing purposes.
 
-* System dependencies
+Clone this repository.
 
-* Configuration
+```
+https://github.com/ivannash23/Snail-Boggo-Panda-Matrix.git
+```
 
-* Database creation
+Bundle install.
 
-* Database initialization
+```
+bundle install
+```
 
-* How to run the test suite
+Create a local database.
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails db:create
+```
 
-* Deployment instructions
+Migrate models.
 
-* ...
+```
+rails db:migrate
+```
+
+Run elastic search
+
+```
+elasticsearch
+```
+
+Run rails server.
+
+```
+rails s
+``` 
+
+### Built with:
+
+-HTML
+-CSS
+-Ruby v. 2.3.3
+-Rails v. 5.0.2
+-Javascript
+-Bootstrap
+-Jquery
+-devise
+-Elastic Search
+-Acts-as-Commentable-with-Threading
+
+
+
+### Existing features:
+-This application allows users to sign in using Github, search repos from General Assembly's Web Development Immersive program, view them, and leave comments on them.
+-Users can link directly to the Github repo.
+
+
+
+*Planned features:
+-Allow users to 'favorite' repos.
+-Add a user profile page with the logged-in user's comments, favorites, and comments directed at them.
+-Alert users to any comments made on their favorite repos.
+
+*Wireframes:
+Inline-style: 
+![alt text](app/assets/images/wireframe1.png)
+
+Inline-style: 
+![alt text](app/assets/images/wireframe2.png)
+
+Inline-style: 
+![alt text](app/assets/images/wireframe3.png)
+
+Inline-style: 
+![alt text](app/assets/images/wireframe4.png)
+
