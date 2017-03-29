@@ -1,3 +1,7 @@
+<div>
+  <%= paginate @repos %>
+</div>
+
 <% @repos.each do |repo| %>
 <div class="thumbnail col-md-10 col-md-offset-1">
   <div class="well title">
@@ -13,3 +17,7 @@
   </div>
 </div>
 <% end %>
+
+<div>
+  <%= paginate @repos %>
+</div>
