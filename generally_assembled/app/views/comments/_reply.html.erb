@@ -4,7 +4,6 @@
     <%= image_tag comment.user[:image_url], :width=> "40px", :height=> "40px", :class=> "profile-pic" %>
     <%=comment.body %>
     <div class="comment-nav"><a class="comment-reply" href="#">reply</a></div>
-
     <div class="reply-form well"><%= form_for @new_comment do |f| %>
       <%= f.hidden_field :commentable_id, value: @new_comment.commentable_id %>
       <%= f.hidden_field :commentable_type, value: @new_comment.commentable_type %>
@@ -15,9 +14,7 @@
 
   </div>
   <div>
-    <div class= "col-md-10 col-md-offset-1">
     <%= render partial: "comments/reply", locals: {comments: comment.children} %>
-
   </div>
 </div>
 <% end %>
