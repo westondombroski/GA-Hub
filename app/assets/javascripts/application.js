@@ -16,19 +16,10 @@
 //= require_tree .
 
 $( document ).ready(function() {
-    console.log( "ready!" );
-    $(".reply-form").hide()
+  $(".reply-form").hide()
 });
 
 $(".comment-reply").click(function(event){
-      event.preventDefault()
-      $(this).next().show()
-    })
-
-$ -&gt;
-$('.comment-reply').click -&gt;
-$(this).closest('.comment').find('.reply-form').toggle()
-return
-
-
-
+  event.preventDefault()
+  $(this).next().show()
+});
