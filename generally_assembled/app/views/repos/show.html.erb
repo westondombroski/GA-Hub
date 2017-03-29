@@ -2,7 +2,8 @@
 <div class="container-fluid">
 	<div class="col-md-8">
 		<div class="thumbnail">
-			<h1 class="header-repos"><%= @repo.name %></h1>
+			<span> <%= link_to "GitHub", "https://github.com/sf-wdi-labs/#{@repo.name}", target: "_blank", class: "btn btn-info"%></span>
+			<h1 class="header-repos"><%= @repo.name %> </h1>
 			<hr>
 			<h4><%= raw @repo.content%></h4>
 		</div>

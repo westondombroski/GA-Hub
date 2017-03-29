@@ -17,17 +17,16 @@
     <a href="/"><img class="img-responsive image" src="https://i.imgur.com/9PfJxoO.png"></a>
     </div>
     <!-- begin hidden -->
-    <div class="col-sm-4  search-bar">
+    <div class="col-sm-4 col-sm-offset-4 search-bar">
       <div class="input-group">
         <%= form_tag("/search", method: "get") do %>
-          <%= label_tag(:q, "Search for:") %>
           <%= text_field_tag(:q) %>
           <%= submit_tag("Search") %>
         <% end %>
       </div>
     </div>
     <!-- end hidden -->
-    <div class="col-sm-1 col-sm-offset-6">
+    <div class="col-sm-1 col-sm-offset-2">
       <h5><%= image_tag current_user[:image_url], :width=> "60px", :height=> "60px", :class=> "profile-pic" %>
       <%= link_to "Sign Out", "/signout", :class=> "standard-text"%>
       </h5>
