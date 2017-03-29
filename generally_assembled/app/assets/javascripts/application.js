@@ -22,8 +22,13 @@ $( document ).ready(function() {
 
 $(".comment-reply").click(function(event){
       event.preventDefault()
-      $(".reply-form").next().show()
+      $(this).next().show()
     })
+
+$ -&gt;
+$('.comment-reply').click -&gt;
+$(this).closest('.comment').find('.reply-form').toggle()
+return
 
 
 
