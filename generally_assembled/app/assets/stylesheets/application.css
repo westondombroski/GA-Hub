@@ -2,7 +2,7 @@ body{
   height: 100%;
   min-height: 100%;
   background-color: #f2f2f2;
-  
+
 }
 
 
@@ -46,7 +46,7 @@ body {
   padding: 30px !important;
   background-color: #fcfcfc !important;
   border-color:#31b0d5 !important;
-  
+
 }
 
 .title {
@@ -130,7 +130,7 @@ a {
 }
 
 .background {
-  background-image: url("https://i.imgur.com/fngHx85.jpg"); 
+  background-image: url("https://i.imgur.com/fngHx85.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -100px;
@@ -139,15 +139,15 @@ a {
   border-radius: 5%
 }
 
-.thumbail img {
-  width: 50%
-  height: 50%;
-}
-
 h3 a {
     color: black !important;
     padding-right: 20px;
-
 }
 
+.thumbnail img {
+  max-width: 75%;
+}
 
+.thumbnail p, li {
+  font-size: 18px;
+}
