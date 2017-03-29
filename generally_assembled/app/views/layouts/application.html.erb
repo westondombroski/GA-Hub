@@ -33,31 +33,21 @@
       </h5>
     </div>
   </div>
-    <% else %>
-    <div class="row container-fluid grey-background">
-      <div class="col-sm-1">
-        <a href="/"><img class="img-responsive image" src="https://i.imgur.com/9PfJxoO.png"></a>
-      </div>
-      <!-- begin hidden -->
-      <div class="col-sm-4 hide-show">
-        <div class="input-group">
-          <input id="smtext" type="text" class="form-control" placeholder="Search for repos">
-          <span class="input-group-btn">
 
-          <%= form_tag("/search", method: "get") do %>
-            <%= label_tag(:q, "Search for:") %>
-            <%= text_field_tag(:q) %>
-            <%= submit_tag("Search") %>
-          <% end %>
-            <button class="btn btn-default" type="button">search</button>
-          </span>
+  <% else %>
+    <div class="container background">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 landing">
+          <div class="col-sm-1 col-sm-offset-5">
+            <h4><%= link_to(image_tag("https://image.flaticon.com/icons/svg/25/25231.svg", :width => 170, :height => 170, :title => "Click here to return to Home"), "/auth/github", :class=> "github-logo")%></h4>
+
+          </div>
+
         </div>
       </div>
-      <!-- end hidden -->
-      <div class="col-sm-1 col-sm-offset-6">
-        <h4><%= link_to "Sign in with Github", "/auth/github", :class=> "standard-text"%></h4>
+      <div class="col-md-3 col-sm-offset-5">
+      <h3 class="git-link"><%= link_to "Sign in with Github", "/auth/github" %></h3>
       </div>
-    </div>
   <% end %>
   <!-- end of navigation -->
 
