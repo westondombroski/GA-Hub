@@ -1,11 +1,9 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :authorize!
 
   def index
     @comments = Comment.all
-  end
-
-  def show
   end
 
   def new

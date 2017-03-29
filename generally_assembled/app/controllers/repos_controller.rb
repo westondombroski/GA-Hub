@@ -1,7 +1,8 @@
 class ReposController < ApplicationController
 
   def index
-    @repos = Repo.all
+    @repos = Repo.all.take 10
+    @repos = Repo.page(params[:page]).per(10)
   end
 
   def show
@@ -15,7 +16,8 @@ class ReposController < ApplicationController
 
   def search
     query = params[:q]
-    @repos = (Repo.search query).take 2
+    @repos = (Repo.search query).take 10
+    @repos = Repo.page(params[:page]).per(10)
   end
 
 end
