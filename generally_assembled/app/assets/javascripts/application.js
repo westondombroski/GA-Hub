@@ -17,4 +17,13 @@
 
 $( document ).ready(function() {
     console.log( "ready!" );
+    $(".reply-form").hide()
 });
+
+$(".comment-reply").click(function(event){
+      event.preventDefault()
+      $(".reply-form").next().show()
+    })
+
+
+

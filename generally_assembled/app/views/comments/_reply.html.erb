@@ -1,20 +1,20 @@
 <% comments.each do |comment| %>
 <div class="comments-show">
-<div class="comment">
+  <div class="comment">
+    <%= image_tag comment.user[:image_url], :width=> "40px", :height=> "40px", :class=> "profile-pic" %>
+    <%=comment.body %>
+    <div class="comment-nav"><a class="comment-reply" href="#">reply</a></div>
+    <div class="reply-form well"><%= form_for @new_comment do |f| %>
+      <%= f.hidden_field :commentable_id, value: @new_comment.commentable_id %>
+      <%= f.hidden_field :commentable_type, value: @new_comment.commentable_type %>
+      <%= f.hidden_field :comment_id, value: comment.id %>
+      <div class="field form-group"><%= f.text_area :body, class: 'form-control' %></div>
+      <div class="field form-group"><%= submit_tag "Post Reply", class: 'btn btn-primary' %></div>
+    <% end %>
 
-<%= comment.body %>
-<div class="comment-nav"><a class="comment-reply" href="#">reply</a></div>
-<div class="reply-form well"><%= form_for @new_comment do |f| %>
-<%= f.hidden_field :commentable_id, value: @new_comment.commentable_id %>
-<%= f.hidden_field :commentable_type, value: @new_comment.commentable_type %>
-<%= f.hidden_field :comment_id, value: comment.id %>
-<div class="field form-group"><%= f.text_area :body, class: 'form-control' %></div>
-<div class="field form-group"><%= submit_tag "Post Reply", class: 'btn btn-primary' %></div>
-<% end %>
-
-</div>
-</div class="well">
-<%= render partial: "comments/reply", locals: {comments: comment.children} %>
-
+  </div>
+  <div>
+    <%= render partial: "comments/reply", locals: {comments: comment.children} %>
+  </div>
 </div>
 <% end %>
