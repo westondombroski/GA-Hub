@@ -2,10 +2,7 @@ body{
   height: 100%;
   min-height: 100%;
   background-color: #f2f2f2;
-  background-image: url("https://i.imgur.com/fngHx85.jpg"); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -110px;
+  
 }
 
 
@@ -129,6 +126,16 @@ a {
 
 .git-link {
   text-align: center;
+}
+
+.background {
+  background-image: url("https://i.imgur.com/fngHx85.jpg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -100px;
+  height: 60em;
+  margin:30px;
+  border-radius: 5%
 }
 
 
