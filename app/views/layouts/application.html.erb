@@ -11,7 +11,7 @@
   <body>
     <div class="container-fluid">
       <!-- nav bar -->
-      <div class="row black-background">
+      <div class="row black-background navbar-fixed-top">
         <!-- GA Logo -->
         <div class="col-xs-1">
           <%= link_to( image_tag("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fculturelabx.com%2Fwp-content%2Fuploads%2F2014%2F10%2Fgeneral-assembly-logo.png&f=1",
@@ -38,7 +38,7 @@
           <div class="col-xs-1">
             <%= link_to( image_tag(current_user[:image_url],
             :width=> "70px", :height=> "70px",
-            :class=> "img-responsive img-circle img",
+            :class=> "gh-logo img img-circle",
             :title=> "Logout"),
             "/signout", :class=> "standard-text") %>
           </div>
@@ -46,7 +46,7 @@
           <div class="col-xs-1">
             <%= link_to( image_tag("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fjdpirtle.com%2Fimages%2Fsocial_icons%2Fgithub_white.png&f=1",
             :width=> "70px", :height=> "70px",
-            :class=> "img-responsive img",
+            :class=> "img gh-logo",
             :title=> "Login"),
             "/auth/github", :class=> "standard-text") %>
           </div>
@@ -55,7 +55,7 @@
       <!-- end of navigation -->
 
       <% if current_user %>
-        <%= flash.notice %>
+        <div class="text-center"><%= flash.notice %></div>
       <% end %>
 
       <%= yield %>

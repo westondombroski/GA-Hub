@@ -6,7 +6,11 @@ class ReposController < ApplicationController
 
   def show
     @repo = Repo.find(params[:id])
-    @new_comment = Comment.build_from(@repo, current_user.id, "")
+    if current_user
+      @new_comment = Comment.build_from(@repo, current_user.id, "")
+    else
+      @new_comment = ""
+    end
   end
 
   def new
@@ -15,7 +19,6 @@ class ReposController < ApplicationController
 
   def search
     query = params[:q]
-    @results = (Repo.search query).count
     @repos = Repo.search query, page: params[:page], per_page: 10
   end
 
