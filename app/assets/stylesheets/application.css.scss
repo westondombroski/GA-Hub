@@ -1,7 +1,16 @@
 body{
-  height: 100%;
-  min-height: 100%;
-  background-color: #f2f2f2;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+body * {
+  font-style: normal ;
+  color: black ;
+}
+code {
+  background-color: #dce6f2 !important;
+}
+.navbar {
+  background-color: white;
 }
 .home {
   margin-top: 130px;
@@ -28,6 +37,10 @@ body{
 }
 .ga-logo {
   margin-top: 10px;
+  margin-left: 12px;
+}
+.gh-logo {
+  margin-top: 20px;
 }
 .index-btn {
   background-color: red;
@@ -40,10 +53,6 @@ body{
 }
 .black-background{
   background-color: black;
-}
-body * {
-  font-style: normal ;
-  color: black ;
 }
 
 .thumbnail {
@@ -58,60 +67,33 @@ body * {
 }
 
 .repo-button-well {
+  left: 0 !important;
+  text-align: center;
   height: 75px;
   border-color:red !important;
 }
-
 .btn {
   margin-right: 10px;
   border-radius: 0 !important;
   border: none !important;
 }
-.nav-search {
-  border-color:#46b8da !important;
-}
-
-.nav-btn {
-  border: 1px solid #46b8da !important;
-}
-
-code {
-  background-color: #dce6f2 !important;
-}
-
 .comments-header {
   border-bottom: 1px dotted gray;
   margin-bottom: 10px;
 }
-
 .comment-nav {
   margin-left: 5px;
   margin-bottom: 10px;
 }
-
-a {
-  font-size: 10px;
-  font-weight: bold;
-  color: #888;
-}
-
 .reply-form {
   display: none;
 }
 .reply {
   margin-left: 25px;
 }
-
-
-h3 a {
-    color: black !important;
-    padding-right: 20px;
-}
-
 .thumbnail img {
   max-width: 75%;
 }
-
 .thumbnail p, li {
   font-size: 18px;
 }

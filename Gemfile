@@ -44,6 +44,10 @@ gem 'acts_as_commentable_with_threading'
 
 gem 'kaminari'
 
+gem "nokogiri"
+
+gem "truncate_html"
+
 
 
 # Use Capistrano for deployment

@@ -4,20 +4,20 @@
 
 <br>
 <% @repos.each do |repo| %>
-  <div class="thumbnail col-md-10 col-md-offset-1">
+  <div class="thumbnail col-xs-10 col-xs-offset-1">
     <div class="well title">
       <h3 class="header-repos text-center"><%= repo.name %></h3>
     </div>
     <hr>
-    <p class="content-repos"><%= raw repo.content.truncate(1000, separator: ' ') %></p>
+    <p class="content-repos"><%= truncate_html( raw repo.content ) %></p>
     <hr>
-    <div class ="well repo-button-well">
+    <div class ="well repo-button-well container-fluid">
       <%= link_to "GitHub", "https://github.com/sf-wdi-labs/#{repo.name}", target: "_blank", class: "col-md-1 col-md-offset-5 btn btn-info"%>
       <%= link_to "Show", repo_path(repo), class: "col-md-1 btn btn-success" %>
     </div>
   </div>
 <% end %>
 
-<div class="text-center">
+<div class="text-center" >
   <%= paginate @repos %>
 </div>
