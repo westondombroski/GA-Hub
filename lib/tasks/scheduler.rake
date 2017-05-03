@@ -27,5 +27,5 @@ task git_repos: :environment do
                 )
   end
   ## Reindex Repos in elasticsearch
-  Repo.reindex
+  # Repo.reindex
 end
